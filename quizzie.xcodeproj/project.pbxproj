@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		307FB9C706DAFAE665B0F106 /* Pods_quizzie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC604DCCB55179837403BA /* Pods_quizzie.framework */; };
+		D383E0C76497BC55BB5A38C0 /* Pods_quizzieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E07FFADFCE08FCB522F99 /* Pods_quizzieTests.framework */; };
+		F6D4276F245B542E00A88610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4276E245B542E00A88610 /* AppDelegate.swift */; };
+		F6D42773245B542E00A88610 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D42772245B542E00A88610 /* BaseViewController.swift */; };
+		F6D42776245B542E00A88610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D42774245B542E00A88610 /* Main.storyboard */; };
+		F6D42778245B542F00A88610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D42777245B542F00A88610 /* Assets.xcassets */; };
+		F6D4277B245B542F00A88610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D42779245B542F00A88610 /* LaunchScreen.storyboard */; };
+		F6D42786245B542F00A88610 /* quizzieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D42785245B542F00A88610 /* quizzieTests.swift */; };
+		F6D42791245B542F00A88610 /* quizzieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D42790245B542F00A88610 /* quizzieUITests.swift */; };
+		F6D427A1245B55B900A88610 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4279E245B55B900A88610 /* HomePresenter.swift */; };
+		F6D427A2245B55B900A88610 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4279F245B55B900A88610 /* HomeViewController.swift */; };
+		F6D427A3245B55B900A88610 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D427A0245B55B900A88610 /* HomeViewController.xib */; };
+		F6D427AD245B612600A88610 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D427AC245B612600A88610 /* Default-568h@2x.png */; };
+		FB4320859C8208539F5A1FBB /* Pods_quizzie_quizzieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6D42782245B542F00A88610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6D42763245B542E00A88610 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6D4276A245B542E00A88610;
+			remoteInfo = quizzie;
+		};
+		F6D4278D245B542F00A88610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6D42763245B542E00A88610 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6D4276A245B542E00A88610;
+			remoteInfo = quizzie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1ABC604DCCB55179837403BA /* Pods_quizzie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B7122FC82495CA71D82F2D /* Pods-quizzie-quizzieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie-quizzieUITests.debug.xcconfig"; path = "Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F0CE9C639E646E7779D18E8 /* Pods-quizzie-quizzieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie-quizzieUITests.release.xcconfig"; path = "Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		52941F4508BC2457AE686008 /* Pods-quizzieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzieTests.debug.xcconfig"; path = "Target Support Files/Pods-quizzieTests/Pods-quizzieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		849E07FFADFCE08FCB522F99 /* Pods_quizzieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DAA0FC23EC1415F03318A56 /* Pods-quizzieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzieTests.release.xcconfig"; path = "Target Support Files/Pods-quizzieTests/Pods-quizzieTests.release.xcconfig"; sourceTree = "<group>"; };
+		B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzie_quizzieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3846F5D321CF66336029AFB /* Pods-quizzie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie.release.xcconfig"; path = "Target Support Files/Pods-quizzie/Pods-quizzie.release.xcconfig"; sourceTree = "<group>"; };
+		E880D2F7F8A75F95D8681998 /* Pods-quizzie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie.debug.xcconfig"; path = "Target Support Files/Pods-quizzie/Pods-quizzie.debug.xcconfig"; sourceTree = "<group>"; };
+		F6D4276B245B542E00A88610 /* quizzie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D4276E245B542E00A88610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6D42772245B542E00A88610 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F6D42775245B542E00A88610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6D42777245B542F00A88610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6D4277A245B542F00A88610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6D4277C245B542F00A88610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D42781245B542F00A88610 /* quizzieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quizzieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D42785245B542F00A88610 /* quizzieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizzieTests.swift; sourceTree = "<group>"; };
+		F6D42787245B542F00A88610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D4278C245B542F00A88610 /* quizzieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quizzieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D42790245B542F00A88610 /* quizzieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizzieUITests.swift; sourceTree = "<group>"; };
+		F6D42792245B542F00A88610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D4279E245B55B900A88610 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F6D4279F245B55B900A88610 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6D427A0245B55B900A88610 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F6D427AC245B612600A88610 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6D42768245B542E00A88610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307FB9C706DAFAE665B0F106 /* Pods_quizzie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D4277E245B542F00A88610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D383E0C76497BC55BB5A38C0 /* Pods_quizzieTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D42789245B542F00A88610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4320859C8208539F5A1FBB /* Pods_quizzie_quizzieUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0788D251FABD569A6E84DC95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E880D2F7F8A75F95D8681998 /* Pods-quizzie.debug.xcconfig */,
+				D3846F5D321CF66336029AFB /* Pods-quizzie.release.xcconfig */,
+				29B7122FC82495CA71D82F2D /* Pods-quizzie-quizzieUITests.debug.xcconfig */,
+				4F0CE9C639E646E7779D18E8 /* Pods-quizzie-quizzieUITests.release.xcconfig */,
+				52941F4508BC2457AE686008 /* Pods-quizzieTests.debug.xcconfig */,
+				8DAA0FC23EC1415F03318A56 /* Pods-quizzieTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		35BE4ADE4A96CF33A230CECE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ABC604DCCB55179837403BA /* Pods_quizzie.framework */,
+				B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */,
+				849E07FFADFCE08FCB522F99 /* Pods_quizzieTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D42762245B542E00A88610 = {
+			isa = PBXGroup;
+			children = (
+				F6D427AC245B612600A88610 /* Default-568h@2x.png */,
+				F6D4276D245B542E00A88610 /* quizzie */,
+				F6D42784245B542F00A88610 /* quizzieTests */,
+				F6D4278F245B542F00A88610 /* quizzieUITests */,
+				F6D4276C245B542E00A88610 /* Products */,
+				0788D251FABD569A6E84DC95 /* Pods */,
+				35BE4ADE4A96CF33A230CECE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F6D4276C245B542E00A88610 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4276B245B542E00A88610 /* quizzie.app */,
+				F6D42781245B542F00A88610 /* quizzieTests.xctest */,
+				F6D4278C245B542F00A88610 /* quizzieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6D4276D245B542E00A88610 /* quizzie */ = {
+			isa = PBXGroup;
+			children = (
+				F6D427A8245B5E9700A88610 /* AppDelegate */,
+				F6D427A6245B5E6900A88610 /* Base */,
+				F6D427A9245B5EAB00A88610 /* Resources */,
+				F6D427A5245B5CD700A88610 /* Screens */,
+				F6D427A7245B5E8B00A88610 /* Storyboards */,
+			);
+			path = quizzie;
+			sourceTree = "<group>";
+		};
+		F6D42784245B542F00A88610 /* quizzieTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6D42785245B542F00A88610 /* quizzieTests.swift */,
+				F6D42787245B542F00A88610 /* Info.plist */,
+			);
+			path = quizzieTests;
+			sourceTree = "<group>";
+		};
+		F6D4278F245B542F00A88610 /* quizzieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F6D42790245B542F00A88610 /* quizzieUITests.swift */,
+				F6D42792245B542F00A88610 /* Info.plist */,
+			);
+			path = quizzieUITests;
+			sourceTree = "<group>";
+		};
+		F6D427A4245B5CC900A88610 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4279E245B55B900A88610 /* HomePresenter.swift */,
+				F6D4279F245B55B900A88610 /* HomeViewController.swift */,
+				F6D427A0245B55B900A88610 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F6D427A5245B5CD700A88610 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F6D427A4245B5CC900A88610 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F6D427A6245B5E6900A88610 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6D42772245B542E00A88610 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6D427A7245B5E8B00A88610 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F6D42779245B542F00A88610 /* LaunchScreen.storyboard */,
+				F6D42774245B542E00A88610 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F6D427A8245B5E9700A88610 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4276E245B542E00A88610 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F6D427A9245B5EAB00A88610 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6D42777245B542F00A88610 /* Assets.xcassets */,
+				F6D4277C245B542F00A88610 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6D4276A245B542E00A88610 /* quizzie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D42795245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzie" */;
+			buildPhases = (
+				5854FC0C383642FE505ED3B0 /* [CP] Check Pods Manifest.lock */,
+				F6D42767245B542E00A88610 /* Sources */,
+				F6D42768245B542E00A88610 /* Frameworks */,
+				F6D42769245B542E00A88610 /* Resources */,
+				2BA630C8EDA1681FC96CA1C7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quizzie;
+			productName = quizzie;
+			productReference = F6D4276B245B542E00A88610 /* quizzie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6D42780245B542F00A88610 /* quizzieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D42798245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzieTests" */;
+			buildPhases = (
+				88AB689E521A0AC2E3B8299C /* [CP] Check Pods Manifest.lock */,
+				F6D4277D245B542F00A88610 /* Sources */,
+				F6D4277E245B542F00A88610 /* Frameworks */,
+				F6D4277F245B542F00A88610 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6D42783245B542F00A88610 /* PBXTargetDependency */,
+			);
+			name = quizzieTests;
+			productName = quizzieTests;
+			productReference = F6D42781245B542F00A88610 /* quizzieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F6D4278B245B542F00A88610 /* quizzieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D4279B245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzieUITests" */;
+			buildPhases = (
+				529FC8E84C264E67D5D9FE21 /* [CP] Check Pods Manifest.lock */,
+				F6D42788245B542F00A88610 /* Sources */,
+				F6D42789245B542F00A88610 /* Frameworks */,
+				F6D4278A245B542F00A88610 /* Resources */,
+				E26155452FCAEFB311116350 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6D4278E245B542F00A88610 /* PBXTargetDependency */,
+			);
+			name = quizzieUITests;
+			productName = quizzieUITests;
+			productReference = F6D4278C245B542F00A88610 /* quizzieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6D42763245B542E00A88610 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ensar Baba";
+				TargetAttributes = {
+					F6D4276A245B542E00A88610 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					F6D42780245B542F00A88610 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = F6D4276A245B542E00A88610;
+					};
+					F6D4278B245B542F00A88610 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = F6D4276A245B542E00A88610;
+					};
+				};
+			};
+			buildConfigurationList = F6D42766245B542E00A88610 /* Build configuration list for PBXProject "quizzie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6D42762245B542E00A88610;
+			productRefGroup = F6D4276C245B542E00A88610 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6D4276A245B542E00A88610 /* quizzie */,
+				F6D42780245B542F00A88610 /* quizzieTests */,
+				F6D4278B245B542F00A88610 /* quizzieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6D42769245B542E00A88610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D4277B245B542F00A88610 /* LaunchScreen.storyboard in Resources */,
+				F6D42778245B542F00A88610 /* Assets.xcassets in Resources */,
+				F6D42776245B542E00A88610 /* Main.storyboard in Resources */,
+				F6D427AD245B612600A88610 /* Default-568h@2x.png in Resources */,
+				F6D427A3245B55B900A88610 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D4277F245B542F00A88610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D4278A245B542F00A88610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA630C8EDA1681FC96CA1C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzie/Pods-quizzie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzie/Pods-quizzie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzie/Pods-quizzie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529FC8E84C264E67D5D9FE21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quizzie-quizzieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5854FC0C383642FE505ED3B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quizzie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88AB689E521A0AC2E3B8299C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quizzieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E26155452FCAEFB311116350 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6D42767245B542E00A88610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D427A2245B55B900A88610 /* HomeViewController.swift in Sources */,
+				F6D42773245B542E00A88610 /* BaseViewController.swift in Sources */,
+				F6D4276F245B542E00A88610 /* AppDelegate.swift in Sources */,
+				F6D427A1245B55B900A88610 /* HomePresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D4277D245B542F00A88610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D42786245B542F00A88610 /* quizzieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D42788245B542F00A88610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D42791245B542F00A88610 /* quizzieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6D42783245B542F00A88610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6D4276A245B542E00A88610 /* quizzie */;
+			targetProxy = F6D42782245B542F00A88610 /* PBXContainerItemProxy */;
+		};
+		F6D4278E245B542F00A88610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6D4276A245B542E00A88610 /* quizzie */;
+			targetProxy = F6D4278D245B542F00A88610 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6D42774245B542E00A88610 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D42775245B542E00A88610 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6D42779245B542F00A88610 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D4277A245B542F00A88610 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6D42793245B542F00A88610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6D42794245B542F00A88610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6D42796245B542F00A88610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E880D2F7F8A75F95D8681998 /* Pods-quizzie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzie/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6D42797245B542F00A88610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3846F5D321CF66336029AFB /* Pods-quizzie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzie/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6D42799245B542F00A88610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52941F4508BC2457AE686008 /* Pods-quizzieTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quizzie.app/quizzie";
+			};
+			name = Debug;
+		};
+		F6D4279A245B542F00A88610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DAA0FC23EC1415F03318A56 /* Pods-quizzieTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quizzie.app/quizzie";
+			};
+			name = Release;
+		};
+		F6D4279C245B542F00A88610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B7122FC82495CA71D82F2D /* Pods-quizzie-quizzieUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = quizzie;
+			};
+			name = Debug;
+		};
+		F6D4279D245B542F00A88610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F0CE9C639E646E7779D18E8 /* Pods-quizzie-quizzieUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TH6Q742K8;
+				INFOPLIST_FILE = quizzieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ensarbaba.quizzieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = quizzie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6D42766245B542E00A88610 /* Build configuration list for PBXProject "quizzie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D42793245B542F00A88610 /* Debug */,
+				F6D42794245B542F00A88610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D42795245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D42796245B542F00A88610 /* Debug */,
+				F6D42797245B542F00A88610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D42798245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D42799245B542F00A88610 /* Debug */,
+				F6D4279A245B542F00A88610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D4279B245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D4279C245B542F00A88610 /* Debug */,
+				F6D4279D245B542F00A88610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6D42763245B542E00A88610 /* Project object */;
+}
