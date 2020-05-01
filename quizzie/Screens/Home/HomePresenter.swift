@@ -11,25 +11,45 @@
 import Foundation
 
 // MARK: View -
-protocol HomeViewProtocol: class {
-
+protocol HomeViewProtocol: LoadDataView {
+    func didFetchQuestions(quizResponse: QuizResponse)
+    func didErrorOccur(error: AlertMessage)
 }
 
 // MARK: Presenter -
 protocol HomePresenterProtocol: class {
 	var view: HomeViewProtocol? { get set }
-    func fetchData()
+    var quizStatusCount: Int { get }
+    func fetchQuestions()
 }
 
 class HomePresenter: HomePresenterProtocol {
 
     weak var view: HomeViewProtocol?
+    private var quizStatus = [QuizStatusData]()
+    private var quizQuestions: QuizResponse?
     
     init(view: HomeViewProtocol) {
         self.view = view
     }
     
-    func fetchData() {
+    func fetchQuestions() {
+        view?.startLoading()
+        APIManager.shared().call(type: RequestItemsType.questions(count: "12")) { (questions: (QuizResponse)?, message: AlertMessage?) in
+            if let questions = questions {
+                self.quizQuestions = questions
+                self.view?.didFetchQuestions(quizResponse: questions)
+            } else {
+                self.view?.didErrorOccur(error: message ?? AlertMessage(title: "Alert", body: "Something went wrong"))
+            }
+            self.view?.stopLoading()
+        }
+    }
+    
+}
 
+extension HomePresenter {
+    var quizStatusCount: Int {
+        return quizStatus.count
     }
 }

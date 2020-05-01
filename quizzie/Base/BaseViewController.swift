@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class BaseViewController: UIViewController {
 
@@ -14,6 +15,4 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
     }
-    
 }
-

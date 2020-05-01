@@ -1,16 +1,44 @@
 PODS:
   - Alamofire (4.9.1)
+  - Bagel (1.3.2):
+    - CocoaAsyncSocket
+  - CocoaAsyncSocket (7.6.4)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Alamofire
+  - Bagel
+  - Reusable
+  - SnapKit
+  - SVProgressHUD
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Bagel
+    - CocoaAsyncSocket
+    - Reusable
+    - SnapKit
+    - SVProgressHUD
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Bagel: 199e0105ac694d6eee9db54dd006c940da6ce81b
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 584a8e2756b8ca78904bb90ccbdb02727e4de436
+PODFILE CHECKSUM: 25b9a8895ab6515e0c84baa3fb87d5cbf1317745
 
 COCOAPODS: 1.9.1
