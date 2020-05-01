@@ -9,9 +9,7 @@
 import UIKit
 import Reusable
 
-extension UITableViewCell: Reusable {}
-
-public class BaseTableViewCell: UITableViewCell {
+class BaseTableViewCell: UITableViewCell, NibReusable {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,5 +21,7 @@ public class BaseTableViewCell: UITableViewCell {
         commonInit()
     }
     
-    func commonInit() { }
+    func commonInit() {
+        selectionStyle = .none
+    }
 }

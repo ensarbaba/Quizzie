@@ -9,8 +9,9 @@
 import Foundation
 
 struct QuizStatusData {
-    var questionMockTitle = "Question Num"
+    var questionMockTitle = "Question Number"
     var questionCount = 12
-    var jokerMockTitle = "Wild Card Num"
+    var jokerMockTitle = "Wild Card Number"
     var jokerCount = 3
+    var currentQuestionNo = 1 
 }

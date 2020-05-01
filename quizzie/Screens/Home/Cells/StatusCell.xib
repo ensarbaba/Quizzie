@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusCell" rowHeight="104" id="bga-hs-yGo" userLabel="StatusCell" customClass="StatusCell" customModule="quizzie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bga-hs-yGo" id="dlT-iq-DgB">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVg-V3-wF0" userLabel="questionView">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="104"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mK-ed-e2A">
+                                <rect key="frame" x="10" y="10" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-gD-out">
+                                <rect key="frame" x="10" y="41" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7mK-ed-e2A" firstAttribute="top" secondItem="MVg-V3-wF0" secondAttribute="top" constant="10" id="6sr-TG-9jT"/>
+                            <constraint firstItem="7mK-ed-e2A" firstAttribute="leading" secondItem="MVg-V3-wF0" secondAttribute="leading" constant="10" id="Aqn-tK-7Ot"/>
+                            <constraint firstAttribute="trailing" secondItem="7mK-ed-e2A" secondAttribute="trailing" constant="10" id="DiB-Ia-c73"/>
+                            <constraint firstItem="gPc-gD-out" firstAttribute="top" secondItem="7mK-ed-e2A" secondAttribute="bottom" constant="10" id="KrW-Lx-Dji"/>
+                            <constraint firstItem="gPc-gD-out" firstAttribute="leading" secondItem="MVg-V3-wF0" secondAttribute="leading" constant="10" id="M7j-14-SJS"/>
+                            <constraint firstAttribute="trailing" secondItem="gPc-gD-out" secondAttribute="trailing" constant="10" id="y40-yL-iF9"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0m1-uh-sTZ" userLabel="wildCardView">
+                        <rect key="frame" x="160" y="0.0" width="160" height="104"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wild Card Num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abd-lD-tBd">
+                                <rect key="frame" x="10" y="10" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4T-wi-OV8">
+                                <rect key="frame" x="10" y="41" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="c4T-wi-OV8" secondAttribute="trailing" constant="10" id="3yd-rA-ltX"/>
+                            <constraint firstAttribute="trailing" secondItem="abd-lD-tBd" secondAttribute="trailing" constant="10" id="Df9-WM-LSb"/>
+                            <constraint firstItem="c4T-wi-OV8" firstAttribute="top" secondItem="abd-lD-tBd" secondAttribute="bottom" constant="10" id="SgV-nu-3nA"/>
+                            <constraint firstItem="c4T-wi-OV8" firstAttribute="leading" secondItem="0m1-uh-sTZ" secondAttribute="leading" constant="10" id="XTE-Xi-kyn"/>
+                            <constraint firstItem="abd-lD-tBd" firstAttribute="top" secondItem="0m1-uh-sTZ" secondAttribute="top" constant="10" id="fQD-3H-lWK"/>
+                            <constraint firstItem="abd-lD-tBd" firstAttribute="leading" secondItem="0m1-uh-sTZ" secondAttribute="leading" constant="10" id="gdr-Fy-TKJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="MVg-V3-wF0" secondAttribute="bottom" id="C3p-6D-bTC"/>
+                    <constraint firstAttribute="bottom" secondItem="0m1-uh-sTZ" secondAttribute="bottom" id="DBP-Av-bMm"/>
+                    <constraint firstItem="MVg-V3-wF0" firstAttribute="top" secondItem="dlT-iq-DgB" secondAttribute="top" id="FKn-9v-QC4"/>
+                    <constraint firstItem="0m1-uh-sTZ" firstAttribute="width" secondItem="MVg-V3-wF0" secondAttribute="width" id="YRI-zT-yEY"/>
+                    <constraint firstItem="0m1-uh-sTZ" firstAttribute="leading" secondItem="MVg-V3-wF0" secondAttribute="trailing" id="Zi7-Jd-1Hk"/>
+                    <constraint firstItem="MVg-V3-wF0" firstAttribute="leading" secondItem="dlT-iq-DgB" secondAttribute="leading" id="a2B-mb-kAc"/>
+                    <constraint firstItem="0m1-uh-sTZ" firstAttribute="top" secondItem="dlT-iq-DgB" secondAttribute="top" id="bwV-LK-3wR"/>
+                    <constraint firstAttribute="trailing" secondItem="0m1-uh-sTZ" secondAttribute="trailing" id="nYw-it-fST"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="questionNumberLabel" destination="gPc-gD-out" id="QjB-Pk-yRY"/>
+                <outlet property="questionTitleLabel" destination="7mK-ed-e2A" id="CeY-1T-i4w"/>
+                <outlet property="wildCardCountLabel" destination="c4T-wi-OV8" id="TNM-RW-Fiz"/>
+                <outlet property="wildCardTitleLabel" destination="abd-lD-tBd" id="pth-dk-zTe"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="173.4375"/>
+        </tableViewCell>
+    </objects>
+</document>
