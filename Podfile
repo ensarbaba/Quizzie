@@ -12,6 +12,7 @@ target 'quizzie' do
   pod 'SnapKit'
   pod 'Bagel'
   pod 'SwiftLint'
+  pod 'R.swift'
   pod 'SVProgressHUD'
   
   target 'quizzieTests' do

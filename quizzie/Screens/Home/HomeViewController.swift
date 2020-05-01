@@ -10,8 +10,8 @@ import UIKit
 
 enum QuizSections: Int, CaseIterable {
     case status = 0
-    case question
-    case option
+    //    case question
+    //    case option
 }
 
 class HomeViewController: BaseViewController {
@@ -20,8 +20,8 @@ class HomeViewController: BaseViewController {
     
     lazy var quizTableView: UITableView = {
         let tv = UITableView()
-//        tv.delegate = self
-//        tv.dataSource = self
+        tv.delegate = self
+        tv.dataSource = self
         tv.isHidden = true
         tv.rowHeight = UITableView.automaticDimension
         tv.estimatedRowHeight = 100
@@ -67,6 +67,7 @@ class HomeViewController: BaseViewController {
             $0.edges.equalToSuperview()
         }
     }
+    
 }
 
 extension HomeViewController: HomeViewProtocol {
@@ -85,21 +86,30 @@ extension HomeViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = QuizSections(rawValue: section) else { return 1 }
-
-          switch section {
-          case .status:
-            return presenter.quizStatusCount
-          case .question:
+        
+        switch section {
+        case .status:
             return 1
-          case .option:
-            return 1
-          }
+            //          case .question:
+            //            return 1
+            //          case .option:
+            //            return 1
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let section = QuizSections(rawValue: indexPath.section) else { return UITableViewCell() }
+        
+        switch section {
+        case .status:
+            let cell: StatusCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(statusData: presenter.quizStatus)
+            return cell
+        }
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("did select")
+    }
 }

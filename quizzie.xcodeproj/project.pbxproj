@@ -35,6 +35,7 @@
 		F6D427CD245B852D00A88610 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D427CC245B852D00A88610 /* AlertMessage.swift */; };
 		F6DC8587245C51A200B4EDE1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC8586245C51A200B4EDE1 /* UIViewController.swift */; };
 		F6DC858C245C61D900B4EDE1 /* LoadDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC858B245C61D900B4EDE1 /* LoadDataView.swift */; };
+		F6DC858F245C888700B4EDE1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC858E245C888700B4EDE1 /* R.generated.swift */; };
 		FB4320859C8208539F5A1FBB /* Pods_quizzie_quizzieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		F6D427CC245B852D00A88610 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		F6DC8586245C51A200B4EDE1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F6DC858B245C61D900B4EDE1 /* LoadDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataView.swift; sourceTree = "<group>"; };
+		F6DC858E245C888700B4EDE1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +177,11 @@
 		F6D4276D245B542E00A88610 /* quizzie */ = {
 			isa = PBXGroup;
 			children = (
-				F6DC858A245C61D000B4EDE1 /* Protocols */,
-				F6D427C1245B841900A88610 /* Network */,
-				F6D427AF245B6E8F00A88610 /* Extensions */,
 				F6D427A8245B5E9700A88610 /* AppDelegate */,
 				F6D427A6245B5E6900A88610 /* Base */,
+				F6D427AF245B6E8F00A88610 /* Extensions */,
+				F6D427C1245B841900A88610 /* Network */,
+				F6DC858A245C61D000B4EDE1 /* Protocols */,
 				F6D427A9245B5EAB00A88610 /* Resources */,
 				F6D427A5245B5CD700A88610 /* Screens */,
 				F6D427A7245B5E8B00A88610 /* Storyboards */,
@@ -254,6 +256,7 @@
 		F6D427A9245B5EAB00A88610 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6DC858E245C888700B4EDE1 /* R.generated.swift */,
 				F6D42777245B542F00A88610 /* Assets.xcassets */,
 				F6D4277C245B542F00A88610 /* Info.plist */,
 			);
@@ -318,10 +321,11 @@
 			buildConfigurationList = F6D42795245B542F00A88610 /* Build configuration list for PBXNativeTarget "quizzie" */;
 			buildPhases = (
 				5854FC0C383642FE505ED3B0 /* [CP] Check Pods Manifest.lock */,
+				F6DC858D245C871000B4EDE1 /* R.swift Script */,
 				F6D42767245B542E00A88610 /* Sources */,
 				F6D42768245B542E00A88610 /* Frameworks */,
 				F6D42769245B542E00A88610 /* Resources */,
-				F6DC8589245C583000B4EDE1 /* ShellScript */,
+				F6DC8589245C583000B4EDE1 /* SwiftLint Script */,
 				2BA630C8EDA1681FC96CA1C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -544,7 +548,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6DC8589245C583000B4EDE1 /* ShellScript */ = {
+		F6DC8589245C583000B4EDE1 /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,6 +557,7 @@
 			);
 			inputPaths = (
 			);
+			name = "SwiftLint Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -560,6 +565,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		F6DC858D245C871000B4EDE1 /* R.swift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R.swift Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -576,6 +601,7 @@
 				F6D42773245B542E00A88610 /* BaseViewController.swift in Sources */,
 				F6D427C7245B84A400A88610 /* EndpointType.swift in Sources */,
 				F6D427B6245B717700A88610 /* QuestionCell.swift in Sources */,
+				F6DC858F245C888700B4EDE1 /* R.generated.swift in Sources */,
 				F6D427B8245B719600A88610 /* OptionCell.swift in Sources */,
 				F6D427BA245B720900A88610 /* StatusCell.swift in Sources */,
 				F6DC858C245C61D900B4EDE1 /* LoadDataView.swift in Sources */,

@@ -21,9 +21,9 @@ extension RequestItemsType: EndPointType {
     
     var baseURL: String {
         switch APIManager.networkEnviroment {
-        case .dev: return "https://opentdb.com/api.php?"
-        case .production: return "https://opentdb.com/api.php?"
-        case .stage: return "https://opentdb.com/api.php?"
+        case .dev: return "https://opentdb.com/api.php?type=multiple&"
+        case .production: return "https://opentdb.com/api.php?type=multiple&"
+        case .stage: return "https://opentdb.com/api.php?type=multiple&"
         }
     }
     

@@ -19,14 +19,14 @@ protocol HomeViewProtocol: LoadDataView {
 // MARK: Presenter -
 protocol HomePresenterProtocol: class {
 	var view: HomeViewProtocol? { get set }
-    var quizStatusCount: Int { get }
+    var quizStatus: QuizStatusData { get set }
     func fetchQuestions()
 }
 
 class HomePresenter: HomePresenterProtocol {
 
     weak var view: HomeViewProtocol?
-    private var quizStatus = [QuizStatusData]()
+    public var quizStatus = QuizStatusData()
     private var quizQuestions: QuizResponse?
     
     init(view: HomeViewProtocol) {
@@ -46,10 +46,4 @@ class HomePresenter: HomePresenterProtocol {
         }
     }
     
-}
-
-extension HomePresenter {
-    var quizStatusCount: Int {
-        return quizStatus.count
-    }
 }
