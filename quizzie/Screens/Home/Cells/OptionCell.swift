@@ -27,7 +27,7 @@ class OptionCell: BaseTableViewCell {
     }
     
     public func configureCell(option: Option, index: Int) {
-        self.optionLabel.text = String(format: "%@) %@", optionLetters[index], option.optionTitle)
+        self.optionLabel.text = String(format: "%@) %@", optionLetters[index], option.optionTitle.htmlAttributedString!.string)
         self.contentView.backgroundColor = option.optionBackground
     }
 

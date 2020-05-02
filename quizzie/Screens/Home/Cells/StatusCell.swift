@@ -23,8 +23,8 @@ class StatusCell: BaseTableViewCell {
     public func configureCell(statusData: QuizStatusData) {
         self.questionTitleLabel.text = statusData.questionMockTitle
         self.questionNumberLabel.text = String(format: "%d / %d", statusData.currentQuestionNo, statusData.questionCount)
-        self.wildCardTitleLabel.text = statusData.jokerMockTitle
-        self.wildCardCountLabel.text = String(statusData.jokerCount)
+        self.wildCardTitleLabel.text = statusData.wildCardMockTitle
+        self.wildCardCountLabel.text = String((statusData.wildCardCount))
     }
     
 }

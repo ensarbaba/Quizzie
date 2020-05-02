@@ -11,7 +11,8 @@ import Foundation
 struct QuizStatusData {
     var questionMockTitle = "Question Number"
     var questionCount = 12
-    var jokerMockTitle = "Wild Card Number"
-    var jokerCount = 3
-    var currentQuestionNo = 1 
+    var wildCardMockTitle = "Wild Card Number"
+    var wildCardCount = 3
+    var currentQuestionNo = 1
+    var userPoint = 0
 }

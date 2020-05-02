@@ -26,6 +26,6 @@ class QuestionCell: BaseTableViewCell {
     }
     
     public func configureCell(questionTitle: String) {
-        self.questionLabel.text = questionTitle
+        self.questionLabel.text = questionTitle.htmlAttributedString!.string
     }
 }

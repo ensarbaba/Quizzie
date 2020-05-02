@@ -12,6 +12,46 @@ enum QuizSections: Int, CaseIterable {
     case status = 0
     case question
     case option
+    
+    var numberOfRows: Int {
+        switch self {
+        case .status:
+            return 1
+        case .question:
+            return 1
+        case .option:
+            //Normally this count should come from API but they mixed up the options and I can't get the option count properly
+            return 4
+        }
+    }
+    
+    var rowHeight: CGFloat {
+        switch self {
+        case .status:
+            return 80
+        default:
+            return 50
+        }
+    }
+    var headerHeight: CGFloat {
+        switch self {
+        case .status:
+            return 0
+        case .question, .option:
+            return 40
+        }
+    }
+    
+    var headerTitle: String {
+        switch self {
+        case .status:
+            return ""
+        case .question:
+            return "Question"
+        case .option:
+            return "Option"
+        }
+    }
 }
 
 class HomeViewController: BaseViewController {
@@ -46,14 +86,16 @@ class HomeViewController: BaseViewController {
         return button
     }()
     
-    @objc func startQuiz() {
-        setupTableView()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
         presenter.fetchQuestions()
     }
+    
+    @objc func startQuiz() {
+        setupTableView()
+    }
+    
     private func setupUI() {
         self.view.addSubview(startQuizButton)
         startQuizButton.snp.makeConstraints {
@@ -69,10 +111,20 @@ class HomeViewController: BaseViewController {
             $0.edges.equalToSuperview()
         }
     }
-    
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func shouldProceedToNextQuestion() {
+        self.quizTableView.isUserInteractionEnabled = true
+        self.quizTableView.reloadData()
+    }
+    
+    func shouldEndQuiz() {
+        Alert.showBasicActionAlert(on: self, with: "Game Over", message: "You had no wildcards, quiz ended") { _ in
+            self.navigationController?.pushViewController(FinalBuilder.buildWith(quizStatus: self.presenter.quizStatus), animated: true)
+        }
+    }
+    
     func didErrorOccur(error: AlertMessage) {
         
     }
@@ -86,19 +138,12 @@ extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return QuizSections.allCases.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = QuizSections(rawValue: section) else { return 1 }
-        
-        switch section {
-        case .status:
-            return 1
-        case .question:
-            return 1
-        case .option:
-            //Normally this count should be come from API but they mixed up the options and I can't get the option count properly
-            return 4
-        }
+        return section.numberOfRows
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let section = QuizSections(rawValue: indexPath.section) else { return UITableViewCell() }
         
@@ -127,10 +172,8 @@ extension HomeViewController: UITableViewDelegate {
         self.quizTableView.isUserInteractionEnabled = false
         self.quizTableView.reloadData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.presenter.quizStatus.currentQuestionNo += 1
-            self.presenter.shuffledOptions.removeAll()
-            self.quizTableView.isUserInteractionEnabled = true
-            self.quizTableView.reloadData()
+            self.presenter.setPointAndWildCardCountForUser(index: indexPath.row)
+            self.presenter.checkNextQuestionAvailable()
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -138,7 +181,7 @@ extension HomeViewController: UITableViewDelegate {
         
         switch section {
         case .status:
-            return 80
+            return section.rowHeight
         case .question:
             return UITableView.automaticDimension
         case .option:
@@ -147,7 +190,6 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
         let view: UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 15))
         view.backgroundColor = .clear
         return view
@@ -157,26 +199,13 @@ extension HomeViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = QuizSections(rawValue: section) else { return "" }
-        switch section {
-        case .status:
-            return ""
-        case .question:
-            return "Question"
-        case .option:
-            return "Answers"
-        }
+        return section.headerTitle
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard let section = QuizSections(rawValue: section) else { return 0 }
-        switch section {
-        case .status:
-            return 0
-        case .question:
-            return 40
-        case .option:
-            return 40
-        }
+        return section.headerHeight
     }
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         header.textLabel?.textAlignment = NSTextAlignment.center

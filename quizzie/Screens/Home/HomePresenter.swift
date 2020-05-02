@@ -19,6 +19,8 @@ struct Option {
 protocol HomeViewProtocol: LoadDataView {
     func didFetchQuestions(quizResponse: QuizResponse)
     func didErrorOccur(error: AlertMessage)
+    func shouldProceedToNextQuestion()
+    func shouldEndQuiz()
 }
 
 // MARK: Presenter -
@@ -31,12 +33,55 @@ protocol HomePresenterProtocol: class {
     func currentOption(index: Int) -> Option
     func modifyDataSourceWith(selectedIndex: Int)
     func fetchQuestions()
-    func setPointForUser(index: Int)
+    func setPointAndWildCardCountForUser(index: Int)
+    func checkNextQuestionAvailable()
 }
 
 class HomePresenter: HomePresenterProtocol {
-    func setPointForUser(index: Int) {
-        if currentQuestionData().correct_answer == currentOption(index: index).optionTitle {userPoint += 10}
+    func checkNextQuestionAvailable() {
+        quizStatus.currentQuestionNo += 1
+        
+        if quizStatus.currentQuestionNo <= quizQuestions?.results?.count ?? 0 && quizStatus.wildCardCount >= 0 {
+            shuffledOptions.removeAll()
+            view?.shouldProceedToNextQuestion()
+        } else {
+            view?.shouldEndQuiz()
+        }
+    }
+    
+    weak var view: HomeViewProtocol?
+    public var quizStatus = QuizStatusData()
+    public var quizQuestions: QuizResponse?
+    var optionsShuffled: Bool = false
+    public var shuffledOptions = [Option]()
+    
+    init(view: HomeViewProtocol) {
+        self.view = view
+    }
+    
+    func currentQuestionData() -> Results {
+        return (self.quizQuestions?.results?[quizStatus.currentQuestionNo-1])!
+    }
+    
+    func fetchQuestions() {
+        view?.startLoading()
+        APIManager.shared().call(type: RequestItemsType.questions(count: String(quizStatus.questionCount))) { (questions: (QuizResponse)?, message: AlertMessage?) in
+            if let questions = questions {
+                self.quizQuestions = questions
+                self.view?.didFetchQuestions(quizResponse: questions)
+            } else {
+                self.view?.didErrorOccur(error: message ?? AlertMessage(title: "Alert", body: "Something went wrong"))
+            }
+            self.view?.stopLoading()
+        }
+    }
+    func setPointAndWildCardCountForUser(index: Int) {
+        if currentQuestionData().correct_answer == currentOption(index: index).optionTitle {
+            quizStatus.userPoint += 10
+        } else {
+            quizStatus.wildCardCount -= 1
+        }
+        if quizStatus.wildCardCount < 0 { view?.shouldEndQuiz() }
     }
     
     func modifyDataSourceWith(selectedIndex: Int) {
@@ -48,7 +93,7 @@ class HomePresenter: HomePresenterProtocol {
             }
         }
         if shuffledOptions[selectedIndex].optionTitle != self.currentQuestionData().correct_answer {
-                  shuffledOptions[selectedIndex].optionBackground = .red
+            shuffledOptions[selectedIndex].optionBackground = .red
         }
     }
     
@@ -61,34 +106,6 @@ class HomePresenter: HomePresenterProtocol {
             shuffledOptions.shuffle()
         }
         return shuffledOptions[index]
-    }
-    
-    weak var view: HomeViewProtocol?
-    public var quizStatus = QuizStatusData()
-    public var quizQuestions: QuizResponse?
-    var optionsShuffled: Bool = false
-    public var shuffledOptions = [Option]()
-    private var userPoint = 0
-    
-    init(view: HomeViewProtocol) {
-        self.view = view
-    }
-    
-    func currentQuestionData() -> Results {
-        return (self.quizQuestions?.results?[quizStatus.currentQuestionNo-1])!
-    }
-    
-    func fetchQuestions() {
-        view?.startLoading()
-        APIManager.shared().call(type: RequestItemsType.questions(count: "12")) { (questions: (QuizResponse)?, message: AlertMessage?) in
-            if let questions = questions {
-                self.quizQuestions = questions
-                self.view?.didFetchQuestions(quizResponse: questions)
-            } else {
-                self.view?.didErrorOccur(error: message ?? AlertMessage(title: "Alert", body: "Something went wrong"))
-            }
-            self.view?.stopLoading()
-        }
     }
     
 }

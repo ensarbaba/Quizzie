@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		307FB9C706DAFAE665B0F106 /* Pods_quizzie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC604DCCB55179837403BA /* Pods_quizzie.framework */; };
 		D383E0C76497BC55BB5A38C0 /* Pods_quizzieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E07FFADFCE08FCB522F99 /* Pods_quizzieTests.framework */; };
+		F68DEF95245D8BE4007E3416 /* Pods_quizzie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68DEF87245D89BE007E3416 /* Pods_quizzie.framework */; };
+		F68DEF96245D8BE4007E3416 /* Pods_quizzie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68DEF87245D89BE007E3416 /* Pods_quizzie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F68DEF99245D8E93007E3416 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68DEF98245D8E93007E3416 /* String.swift */; };
 		F6D4276F245B542E00A88610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4276E245B542E00A88610 /* AppDelegate.swift */; };
 		F6D42773245B542E00A88610 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D42772245B542E00A88610 /* BaseViewController.swift */; };
 		F6D42778245B542F00A88610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D42777245B542F00A88610 /* Assets.xcassets */; };
@@ -40,6 +42,12 @@
 		F6DC85A1245CBBB700B4EDE1 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC859F245CBBB700B4EDE1 /* OptionCell.swift */; };
 		F6DC85A2245CBBB700B4EDE1 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DC85A0245CBBB700B4EDE1 /* OptionCell.xib */; };
 		F6DC85A4245CC32800B4EDE1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC85A3245CC32800B4EDE1 /* Array.swift */; };
+		F6DC85A9245CE63500B4EDE1 /* FinalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC85A6245CE63500B4EDE1 /* FinalPresenter.swift */; };
+		F6DC85AA245CE63500B4EDE1 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC85A7245CE63500B4EDE1 /* FinalViewController.swift */; };
+		F6DC85AB245CE63500B4EDE1 /* FinalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DC85A8245CE63500B4EDE1 /* FinalViewController.xib */; };
+		F6EC632A245D6DAC0074853D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC6329245D6DAC0074853D /* HomeBuilder.swift */; };
+		F6EC632C245D6E340074853D /* FinalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC632B245D6E340074853D /* FinalBuilder.swift */; };
+		F6EC632E245D81330074853D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC632D245D81330074853D /* Alert.swift */; };
 		FB4320859C8208539F5A1FBB /* Pods_quizzie_quizzieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +68,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F68DEF97245D8BE4007E3416 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F68DEF96245D8BE4007E3416 /* Pods_quizzie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1ABC604DCCB55179837403BA /* Pods_quizzie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B7122FC82495CA71D82F2D /* Pods-quizzie-quizzieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie-quizzieUITests.debug.xcconfig"; path = "Target Support Files/Pods-quizzie-quizzieUITests/Pods-quizzie-quizzieUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +92,10 @@
 		B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzie_quizzieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3846F5D321CF66336029AFB /* Pods-quizzie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie.release.xcconfig"; path = "Target Support Files/Pods-quizzie/Pods-quizzie.release.xcconfig"; sourceTree = "<group>"; };
 		E880D2F7F8A75F95D8681998 /* Pods-quizzie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzie.debug.xcconfig"; path = "Target Support Files/Pods-quizzie/Pods-quizzie.debug.xcconfig"; sourceTree = "<group>"; };
+		F68DEF7D245D8874007E3416 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68DEF81245D88C9007E3416 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68DEF87245D89BE007E3416 /* Pods_quizzie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_quizzie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68DEF98245D8E93007E3416 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F6D4276B245B542E00A88610 /* quizzie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D4276E245B542E00A88610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6D42772245B542E00A88610 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +133,13 @@
 		F6DC859F245CBBB700B4EDE1 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		F6DC85A0245CBBB700B4EDE1 /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
 		F6DC85A3245CC32800B4EDE1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		F6DC85A6245CE63500B4EDE1 /* FinalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPresenter.swift; sourceTree = "<group>"; };
+		F6DC85A7245CE63500B4EDE1 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		F6DC85A8245CE63500B4EDE1 /* FinalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinalViewController.xib; sourceTree = "<group>"; };
+		F6EC6329245D6DAC0074853D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		F6EC632B245D6E340074853D /* FinalBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBuilder.swift; sourceTree = "<group>"; };
+		F6EC632D245D81330074853D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F6EC6332245D87C80074853D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				307FB9C706DAFAE665B0F106 /* Pods_quizzie.framework in Frameworks */,
+				F68DEF95245D8BE4007E3416 /* Pods_quizzie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +186,10 @@
 		35BE4ADE4A96CF33A230CECE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68DEF87245D89BE007E3416 /* Pods_quizzie.framework */,
+				F68DEF81245D88C9007E3416 /* Alamofire.framework */,
+				F68DEF7D245D8874007E3416 /* Alamofire.framework */,
+				F6EC6332245D87C80074853D /* Alamofire.framework */,
 				1ABC604DCCB55179837403BA /* Pods_quizzie.framework */,
 				B3CF4E8D1926BE0C35E99874 /* Pods_quizzie_quizzieUITests.framework */,
 				849E07FFADFCE08FCB522F99 /* Pods_quizzieTests.framework */,
@@ -218,6 +255,7 @@
 		F6D427A4245B5CC900A88610 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F6EC6329245D6DAC0074853D /* HomeBuilder.swift */,
 				F6D4279E245B55B900A88610 /* HomePresenter.swift */,
 				F6D4279F245B55B900A88610 /* HomeViewController.swift */,
 				F6D427A0245B55B900A88610 /* HomeViewController.xib */,
@@ -231,6 +269,7 @@
 		F6D427A5245B5CD700A88610 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F6DC85A5245CE61800B4EDE1 /* Final */,
 				F6D427A4245B5CC900A88610 /* Home */,
 			);
 			path = Screens;
@@ -241,6 +280,7 @@
 			children = (
 				F6D42772245B542E00A88610 /* BaseViewController.swift */,
 				F6D427B3245B6F3E00A88610 /* BaseTableViewCell.swift */,
+				F6EC632D245D81330074853D /* Alert.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -288,6 +328,7 @@
 				F6D427B0245B6EA000A88610 /* UIEdgeInsets.swift */,
 				F6DC8586245C51A200B4EDE1 /* UIViewController.swift */,
 				F6DC85A3245CC32800B4EDE1 /* Array.swift */,
+				F68DEF98245D8E93007E3416 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +382,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F6DC85A5245CE61800B4EDE1 /* Final */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC632B245D6E340074853D /* FinalBuilder.swift */,
+				F6DC85A6245CE63500B4EDE1 /* FinalPresenter.swift */,
+				F6DC85A7245CE63500B4EDE1 /* FinalViewController.swift */,
+				F6DC85A8245CE63500B4EDE1 /* FinalViewController.xib */,
+			);
+			path = Final;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +407,7 @@
 				F6D42769245B542E00A88610 /* Resources */,
 				F6DC8589245C583000B4EDE1 /* SwiftLint Script */,
 				2BA630C8EDA1681FC96CA1C7 /* [CP] Embed Pods Frameworks */,
+				F68DEF97245D8BE4007E3416 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -453,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D4277B245B542F00A88610 /* LaunchScreen.storyboard in Resources */,
+				F6DC85AB245CE63500B4EDE1 /* FinalViewController.xib in Resources */,
 				F6DC85A2245CBBB700B4EDE1 /* OptionCell.xib in Resources */,
 				F6DC859C245CB07900B4EDE1 /* QuestionCell.xib in Resources */,
 				F6DC8594245CA58B00B4EDE1 /* StatusCell.xib in Resources */,
@@ -626,17 +680,23 @@
 			files = (
 				F6D427A2245B55B900A88610 /* HomeViewController.swift in Sources */,
 				F6D427C5245B847800A88610 /* ErrorObject.swift in Sources */,
+				F6EC632A245D6DAC0074853D /* HomeBuilder.swift in Sources */,
 				F6DC85A1245CBBB700B4EDE1 /* OptionCell.swift in Sources */,
 				F6D427C0245B7D7300A88610 /* QuizResponse.swift in Sources */,
 				F6DC859B245CB07900B4EDE1 /* QuestionCell.swift in Sources */,
+				F6DC85A9245CE63500B4EDE1 /* FinalPresenter.swift in Sources */,
 				F6DC8587245C51A200B4EDE1 /* UIViewController.swift in Sources */,
 				F6D427B1245B6EA000A88610 /* UIEdgeInsets.swift in Sources */,
+				F6EC632E245D81330074853D /* Alert.swift in Sources */,
 				F6D42773245B542E00A88610 /* BaseViewController.swift in Sources */,
 				F6D427C7245B84A400A88610 /* EndpointType.swift in Sources */,
 				F6DC858F245C888700B4EDE1 /* R.generated.swift in Sources */,
 				F6D427BA245B720900A88610 /* StatusCell.swift in Sources */,
 				F6DC858C245C61D900B4EDE1 /* LoadDataView.swift in Sources */,
+				F6EC632C245D6E340074853D /* FinalBuilder.swift in Sources */,
+				F6DC85AA245CE63500B4EDE1 /* FinalViewController.swift in Sources */,
 				F6D4276F245B542E00A88610 /* AppDelegate.swift in Sources */,
+				F68DEF99245D8E93007E3416 /* String.swift in Sources */,
 				F6D427CB245B84E400A88610 /* NetworkEnvironment.swift in Sources */,
 				F6D427BF245B7D7300A88610 /* Results.swift in Sources */,
 				F6D427B4245B6F3E00A88610 /* BaseTableViewCell.swift in Sources */,
@@ -810,7 +870,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E880D2F7F8A75F95D8681998 /* Pods-quizzie.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TH6Q742K8;
@@ -831,7 +890,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3846F5D321CF66336029AFB /* Pods-quizzie.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TH6Q742K8;

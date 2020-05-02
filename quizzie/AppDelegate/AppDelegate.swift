@@ -18,11 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Bagel.start()
 
-        let view = HomeViewController()
-        let presenter = HomePresenter(view: view)
-        view.presenter = presenter
-        
-        let navigationController = UINavigationController(rootViewController: view)
+        let navigationController = UINavigationController(rootViewController: HomeBuilder.build())
         navigationController.navigationBar.isTranslucent = false
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
