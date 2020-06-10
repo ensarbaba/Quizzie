@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//New changes
 enum QuizSections: Int, CaseIterable {
     case status = 0
     case question
